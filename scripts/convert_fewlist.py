@@ -5,12 +5,12 @@ import numpy as np
 from os import path
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--droot', type=str, default='/home/bykang/voc')
+parser.add_argument('--droot', type=str, default='/kaggle/working/DATA_ROOT')
 args = parser.parse_args()
 
 args.droot = args.droot.rstrip('/')
 tgt_folder = path.join(args.droot, 'voclist')
-src_folder = 'data/vocsplit'
+src_folder = '/kaggle/working/Fewshot_Detection/data/vocsplit'
 
 print('===> Converting few-shot name lists.. ')
 for name_list in sorted(os.listdir(src_folder)):
