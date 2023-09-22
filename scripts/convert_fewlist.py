@@ -20,7 +20,7 @@ for name_list in sorted(os.listdir(src_folder)):
         names = f.readlines()
     
     # Replace data root
-    names = [name.replace('/scratch/bykang/datasets', args.droot) 
+    names = [name.replace(' /home/bykang/voc', args.droot) 
              for name in names]
     
     with open(path.join(args.droot, 'voclist', name_list), 'w') as f:
@@ -40,7 +40,7 @@ for fname in ['voc_traindict_full.txt',
         lines = f.readlines()
 
     # Replace data root
-    lines = [line.replace('/scratch/bykang/datasets', args.droot) 
+    lines = [line.replace(' /home/bykang/voc', args.droot) 
              for line in lines]
 
     # Rewrite linea
